@@ -35,17 +35,20 @@ accessible cluster, it will:
    * [Windows](https://metriton.datawire.io/downloads/windows/edgectl.exe)
    * or use a [curl command](/reference/edgectl-download).
 
+2. Move the file into your PATH (for Windows users, move it into the Windows
+   Systems path).
+   * Print your PATH with `echo cp ./edgectl /usr/local/bin`
+   * For Linux and MacOS, ensure the file is executable with the command `chmod u+x /usr/local/bin/edgectl`
+   * Run the executable file with the command `./edgectl`
+
    If using macOS, you may encounter a security block. To change this you need to enable permissions to download files outside of the app store. To change this:
 
      * Go to **System Preferences > Security & Privacy**.
-     * Click the **Open Anyway** button.
+     * Click the **Allow Anyway** button.
      * Click the **Open** button.
+     * Run the command again, and click the **Open** button to reconfirm.
 
-2. Move the file into your PATH (for Windows users, move it into the Windows
-   Systems path).
-   * Print your PATH with `echo $PATH`
-   * For Linux and MacOS, ensure the file is executable with the command `chmod a+x /usr/local/bin/edgectl`
-   * Run the executable file with the command `./edgectl`
+
 3. Now, run the following command: `edgectl install`
 
     Your terminal will print something similar to the following as it provisions
@@ -71,7 +74,12 @@ accessible cluster, it will:
     Congratulations, you’ve successfully installed the Ambassador Edge Stack in your Kubernetes cluster. Visit http://192.168.64.2:31334 to access your Edge Stack installation and for additional configuration.
     ```
 
-4. Provide an email address as required by the ACME TLS certificate provider, Let's Encrypt. Then your terminal will print something similar to the following:
+4. Provide an email address as required by the ACME TLS certificate provider,
+   Let's Encrypt. The installer may take up to a minute or more to obtain the
+   TLS certificate.
+   
+   Then your terminal will print something similar to the
+   following:
 
     ```shell
     -> Obtaining a TLS certificate from Let’s Encrypt.
