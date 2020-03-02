@@ -41,15 +41,14 @@ accessible cluster, it will:
    * For Linux and MacOS, ensure the file is executable with the command `chmod u+x /usr/local/bin/edgectl`
    * Run the executable file with the command `./edgectl`
 
-   If using macOS, you may encounter a security block. To change this you need to enable permissions to download files outside of the app store. To change this:
+3. Now, run the following command: `edgectl install`
+
+      **NOTE:** If using macOS, you may encounter a security block. To change this you need to enable permissions to download files outside of the app store. To change this:
 
      * Go to **System Preferences > Security & Privacy**.
      * Click the **Allow Anyway** button.
      * Click the **Open** button.
      * Run the command again, and click the **Open** button to reconfirm.
-
-
-3. Now, run the following command: `edgectl install`
 
     Your terminal will print something similar to the following as it provisions
     a load balancer, configures TLS, and provides you with an `edgestack.me` subdomain:
